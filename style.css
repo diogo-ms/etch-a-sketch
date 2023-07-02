@@ -2,14 +2,21 @@ body {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
+  background-color: #DDE6ED;
 }
 #container {
   display: flex;
-  flex-wrap: wrap;
+  flex-direction: column;
+  width: 500px;
+  height: 500px;
+  background-color: white;
 }
-.grid-items {
-  width: 16px;
-  height: 16px;
-  border-top: 1px solid black;
-  border-left: 1px solid black;
+.row {
+  display: flex;
+  width: 100%;
+  flex-grow: 1;
+}
+.pixel {
+  flex-grow: 1;
+  border: 1px solid rgba(190, 190, 190, 0.25);
 }
