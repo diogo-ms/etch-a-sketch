@@ -2,6 +2,8 @@ const container = document.createElement('div');
 container.id = 'container'
 document.body.appendChild(container);
 
+let pixels = document.querySelectorAll('.pixel');
+
 function createGrids(num) {
   for (let i = 0; i <= num; i++) {
     let row = document.createElement('div');
@@ -14,6 +16,9 @@ function createGrids(num) {
     container.appendChild(row);
   }
 }
-
-createGrids(17);
-console.log(pixel)
+function brush(event) {
+  let pixel = event.target;
+  pixel.style.backgroundColor = "black";
+}
+createGrids(16);
+container.addEventListener("mouseover", brush);
